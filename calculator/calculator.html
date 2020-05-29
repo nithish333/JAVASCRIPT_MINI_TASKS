@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+        <link rel="stylesheet" href="calculatorCSS.css">
+        <script src="calculatorJS.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="input">
+                <div class="previous">
+                    <p class="previousText" id="previousTextId"></p>
+                </div>
+                <div class="result">
+                    <p class="resultText" id="resultTextId"></p>
+                </div>
+                
+            </div>
+            <div class="buttonClass">
+                <button class="clearbutton" value="CLEAR" onclick="clearValues()">CLEAR</button>
+                <button class="obutton" value="%" style="background-color: #2799db; font-size: larger;" onclick="insertInHistory('%')">%</button>
+                <button class="obutton" value="/" style="background-color: #f08080;font-size: larger;" onclick="insertInHistory('/')">/</button>
+                <button class="button" value="7" onclick="insertInHistory(7)">7</button>
+                <button class="button" value="8"onclick="insertInHistory(8)">8</button>
+                <button class="button" value="9"onclick="insertInHistory(9)">9</button>
+                <button class="obutton" value="*" style="background-color: #20b2aa;font-size: 30px;padding-top: 8px;"onclick="insertInHistory('*')">*</button>
+                <button class="button" value="4" onclick="insertInHistory(4)">4</button>
+                <button class="button" value="5" onclick="insertInHistory(5)">5</button>
+                <button class="button" value="6"onclick="insertInHistory(6)">6</button>
+                <button class="obutton" value="-" style="background-color: hsl(7, 78%, 56%);font-size: larger;" onclick="insertInHistory('-')">-</button>
+                <button class="button" value="1" onclick="insertInHistory(1)">1</button>
+                <button class="button" value="2" onclick="insertInHistory(2)">2</button>
+                <button class="button" value="3" onclick="insertInHistory(3)">3</button>
+                <button class="obutton" value="+" style="background-color: hsl(337, 72%, 47%);font-size: larger;" onclick="insertInHistory('+')">+</button>
+                <button class="zerobutton" value="0" onclick="insertInHistory(0)">0</button>
+                <button class="dotbutton" value="." onclick="insertInHistory('.')">.</button>
+                <button class="obutton" value="=" style="background-color: #e0ae22;font-size: larger;" onclick="equal()">=</button>
+            </div>
+        </div>
+    </body>
+</html>

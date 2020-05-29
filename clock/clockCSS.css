@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+}
+.clock{
+    width:30rem;
+    height: 30rem;
+    border: 15px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+.clock::before{
+content: '';
+position: absolute;
+width: 10px;
+height: 10px;
+border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 100000;
+}
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+.hand{
+    width:50%;
+    height:6px;
+    position: absolute;
+    top:50%;
+    background-color: #db0808;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+}
+.hoursHand{
+    background-color: #ffffff;
+    
+}
+.hand minutesHand{
+    width:40%;
+    background-color: #ffffff;
+    
+}
+h2{
+    color: #ffffff;
+}
+.clockTime{
+    position: absolute;
+    bottom:0%;
+    display: flex;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.clockTime div{
+    width:100px;
+    height: 100px;
+    border: 1px solid #ffffff;
+    padding:20px;
+    display: block;
+    
+    text-align: center;
+}
+
+.clockTime h2{
+    font-size: 35px;
+    font-weight: bolder;
+}

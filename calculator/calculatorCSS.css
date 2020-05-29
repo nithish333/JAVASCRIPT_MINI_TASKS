@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('assets/calcBack.jpg') ;
+    background-position: center;
+    background-size: cover;
+    font-family: "Poppins",sans-serif;
+}
+.container{
+
+    width:330px;
+    height:520px;
+    background-color: #eaedef;
+    border:1px solid #eaedef;
+    border-radius: 15px ;
+    position: relative;
+    top:50px;
+    margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+.input{
+    height:120px;
+}
+.buttonClass{
+    height:400px;
+}
+.previousText{
+    
+    text-align: right; 
+    height:40px;
+    padding-top: 20px;
+    margin:0 15px;
+    font-weight: 500;
+    color: #919191;
+
+}
+.resultText{
+    
+    text-align: right; 
+    height: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 20px;
+}
+button{
+    width:50px;
+    height: 50px;
+    margin:15px;
+    float: left;
+    border-radius: 50px;
+    border-width:0;
+    cursor:pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+.clearButton{
+    width:130px;
+    letter-spacing: 2px;
+}
+.zerobutton{
+    
+    width:130px;
+}
+.zerobutton:focus, .clearButton:focus, .obutton:focus,.button:focus,.dotButton:focus{
+    outline:none;
+}
+.zerobutton,.clearButton,.buttonClass,.dotButton{
+    background-color: #eaedef;
+}
+.obutton{
+    text-align: center;
+}
