@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+      input {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        height: 30px;
+        padding-left: 30px;
+        font-size: 15px;
+      }
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        width: 50%;
+        border: 1px solid #dddddd;
+        padding: 0;
+        margin-top: 30px;
+        overflow: hidden;
+      }
+      li {
+        border: 1px solid #dddddd;
+        padding: 10px;
+        padding-left: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Filter through the list</h2>
+
+    <input type="text" id="box" placeholder="Search for some values..." />
+    <ul class="listHeading" id="liHead">
+      <li class="listItems">Apple</li>
+      <li class="listItems">baLL</li>
+      <li class="listItems">cAt</li>
+      <li class="listItems">Dog</li>
+      <li class="listItems">faN</li>
+      <li class="listItems">giraFfe</li>
+    </ul>
+    <script>
+      var inputValue = document.getElementById("box");
+      inputValue.addEventListener("keyup", filter);
+      var ulList = document.getElementById("lihead");
+      function filter() {
+        // console.log(inputValue.value);
+        var ci = inputValue.value.toUpperCase();
+        console.log(ci);
+
+        var li = document.getElementsByClassName("listItems");
+        for (var i = 0; i < li.length; i++) {
+          if (li[i].innerText.toUpperCase().indexOf(ci) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
 
