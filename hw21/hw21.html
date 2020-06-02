@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hw21</title>
+    <link rel="stylesheet" href="hw21.css" />
+  </head>
+  <body>
+    <h2 style="color: red; text-align: center;">
+      CS 5130 Advanced Web Applications and Services Development HW 2
+    </h2>
+
+    <table class="table">
+      <tr>
+        <th>n</th>
+        <th>10*n</th>
+        <th>n^2</th>
+        <th>n%2</th>
+        <th>Total</th>
+      </tr>
+    </table>
+
+    <script>
+      //javascript
+      let number = prompt("Enter the number between 1 to 10");
+
+      var totDiv = document.querySelector(".table");
+
+      console.log(totDiv);
+      //Check number less than 10
+
+      if (number > 10 || number < 0) {
+        alert("Number should be between 1 to 10");
+      } else {
+        for (let i = 1; i <= number; i++) {
+          var row = totDiv.insertRow(i);
+          var n = row.insertCell(0);
+          var mul = row.insertCell(1);
+          var pow = row.insertCell(2);
+          var mod = row.insertCell(3);
+          var total = row.insertCell(4);
+          n.innerText = i;
+          mul.innerText = parseInt(i * 10);
+          pow.innerText = Math.pow(i, 2);
+          mod.innerText = i % 2;
+          total.innerText = i * 10 + Math.pow(i, 2) + (i % 2);
+        }
+      }
+    </script>
+  </body>
+</html>
